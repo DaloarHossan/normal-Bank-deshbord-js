@@ -68,6 +68,77 @@ document.getElementById('minus').addEventListener('click',function(){
 
 })
 
+// withdraw 
+
+document.getElementById('withdraw-button').addEventListener('click',function(){
+	const withdraw=document.getElementById('withdraw-ammount');
+	const newwithdrawAmmount=withdraw.value;
+	const withdrawTotal=document.getElementById('withdraw-total');
+	const previouswithdrawTotal=withdrawTotal.innerText;
+	const total=document.getElementById('balance');
+	const previousBalance=total.innerText;
+
+   if(isNaN(newwithdrawAmmount)){
+	  const p= document.createElement('small');
+	   p.innerText='please enter a valid ammount!'
+	   p.style.color='red';
+	   const errorP=document.getElementById('error');
+	   errorP.appendChild(p);
+   }
+   else{
+	const totalwithdraw=parseFloat(newwithdrawAmmount)+parseFloat(previouswithdrawTotal);
+	withdrawTotal.innerText=totalwithdraw;
+	const totalbalance =parseFloat(previousBalance)-parseFloat(newwithdrawAmmount);
+	total.innerText=totalbalance;
+	 withdraw.value=null;
+ 
+   }
+}) 
+document.getElementById('plusW').addEventListener('click',function(){
+	const withdraw=document.getElementById('withdraw-ammount');
+	const withdrawAmmount=withdraw.value;
+	if(isNaN(withdrawAmmount)){
+		const p= document.createElement('small');
+		 p.innerText='please enter a valid ammount!'
+		 p.style.color='red';
+		 const errorP=document.getElementById('error');
+		 errorP.appendChild(p);
+	 }
+	 else{
+		const withdraw=document.getElementById('withdraw-ammount');
+		const depositAmmount=withdraw.value;
+		withdraw.value++;
+		
+	 }
+
+})
+
+// minus
+
+document.getElementById('minusW').addEventListener('click',function(){
+	const withdraw=document.getElementById('withdraw-ammount');
+	const withdarwAmmount=withdraw.value;
+	if(isNaN(withdarwAmmount)){
+		const p= document.createElement('small');
+		 p.innerText='please enter a valid ammount!'
+		 p.style.color='red';
+		 const errorP=document.getElementById('error');
+		 errorP.appendChild(p);
+	 }
+	 else{
+		const withdarw=document.getElementById('withdarw-ammount');
+		const withdrawAmmount=withdraw.value;
+		if(withdrawAmmount>=0)
+		{
+			withdraw.value--;
+		}
+		else{
+			withdraw.value=0;
+		}
+		
+	 }
+
+})
 	
    
 
