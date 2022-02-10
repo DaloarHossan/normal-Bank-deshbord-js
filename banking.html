@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bank Deshbord</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+	<h1 class="text-4xl font-bold text-center mt-16">Your Bank <span class="text-purple-600">Deshbord</span></h1>
+	<main class="w-3/4 mx-auto ">
+		<section class="my-10">
+			<div class="grid grid-cols-3 gap-4 text-white">
+				<div class="rounded bg-cyan-300 p-8">
+					<h1 class="text-2xl">Deposit</h1>
+					<h1 class="text-4xl">$<span id="deposit-total">00</span> </h1>
+				</div>
+				<div class="rounded bg-green-300 p-8">
+					<h1 class="text-2xl">Withdraw</h1>
+					<h1 class="text-4xl">$00</h1>
+				</div>
+				<div class="rounded bg-yellow-300 p-8">
+					<h1 class="text-2xl">Balance</h1>
+					<h1 class="text-4xl">$1500</h1>
+				</div>
+			</div>
+		</section>
+		<!-- input ammount section
+		 -->
+		 <section>
+			 <div class="grid grid-cols-2 gap-4">
+				<div class="bg-purple-100 rounded p-8" id="error">
+					<h1 class="text-2xl mb-2">Please Deposit</h1>
+					<div class="">
+						<input class="p-3 border mb-2 w-1/2 rounded border-gray-400 " type="text" placeholder="$ammount deposit" id="deposit-ammount">
+					<button id="plus" class=" bg-green-400 rounded-full p-4 mx-2 font-bold">+</button>
+					<button id="minus" class=" bg-red-400 rounded-full p-4 font-bold text-xl">-</button> 
+					</div> 
+					<button id="deposit-button" class="px-3 rounded border border-gray-400 bg-indigo-500 font-semibold py-2 text-white">Deposit</button>
+				</div>
+				<div class="bg-purple-100 rounded p-8">
+					<h1 class="text-2xl mb-2">Please Withdraw</h1>
+					<div>
+						<input class="p-3 border mb-2 w-1/2 rounded border-gray-400" type="text" placeholder="$ammount Withdraw" id="withdraw-ammount">
+					<button  class=" bg-green-400 rounded-full p-4 mx-2 font-bold">+</button>
+					<button class=" bg-red-400 rounded-full p-4 font-bold text-xl">-</button> 
+					</div>
+
+					<button id="withdraw-button" class="px-3 rounded border border-gray-400 bg-indigo-500 font-semibold py-2 text-white">Withdraw</button>
+				</div>
+			 </div>
+		 </section>
+	</main>
+	<script src="app/bank.js"></script>
+</body>
+</html>
