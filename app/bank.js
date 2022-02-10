@@ -1,8 +1,12 @@
 document.getElementById('deposit-button').addEventListener('click',function(){
 	const deposit=document.getElementById('deposit-ammount');
-	const depositAmmount=deposit.value;
+	const newdepositAmmount=deposit.value;
 	const depositTotal=document.getElementById('deposit-total');
-   if(isNaN(depositAmmount)){
+	const previousdepositTotal=depositTotal.innerText;
+	const total=document.getElementById('balance');
+	const previousBalance=total.innerText;
+
+   if(isNaN(newdepositAmmount)){
 	  const p= document.createElement('small');
 	   p.innerText='please enter a valid ammount!'
 	   p.style.color='red';
@@ -10,10 +14,12 @@ document.getElementById('deposit-button').addEventListener('click',function(){
 	   errorP.appendChild(p);
    }
    else{
-	   depositTotal.innerText=depositAmmount;
-	 
-        deposit.value=null;
-	
+	const totalDeposit=parseFloat(newdepositAmmount)+parseFloat(previousdepositTotal);
+	depositTotal.innerText=totalDeposit;
+	const totalbalance =parseFloat(newdepositAmmount)+parseFloat(previousBalance);
+	total.innerText=totalbalance;
+	 deposit.value=null;
+ 
    }
 }) 
 document.getElementById('plus').addEventListener('click',function(){
