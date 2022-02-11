@@ -7,20 +7,20 @@
 	<title>Bank Deshbord</title>
 	<script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-	<h1 class="text-4xl font-bold text-center mt-16">Your Bank <span class="text-purple-600">Deshbord</span></h1>
+<body class="bg-violet-200">
+	<h1 class="text-4xl font-bold text-center mt-16">My Bank <span class="text-purple-600">Deshbord</span></h1>
 	<main class="w-3/4 mx-auto ">
 		<section class="my-10">
 			<div class="grid grid-cols-3 gap-4 text-white">
-				<div class="rounded bg-cyan-300 p-8">
+				<div class="rounded bg-cyan-300 p-8 shadow-md">
 					<h1 class="text-2xl">Deposit</h1>
 					<h1 class="text-4xl">$<span id="deposit-total">00</span> </h1>
 				</div>
-				<div class="rounded bg-green-300 p-8">
+				<div class="rounded bg-green-300 p-8 shadow-md">
 					<h1 class="text-2xl">Withdraw</h1>
 					<h1 class="text-4xl">$ <span id="withdraw-total">00</span> </h1>
 				</div>
-				<div class="rounded bg-yellow-300 p-8">
+				<div class="rounded bg-yellow-300 p-8 shadow-md">
 					<h1 class="text-2xl">Balance</h1>
 					<h1 class="text-4xl">$ <span id="balance">1500</span> </h1>
 				</div>
@@ -30,21 +30,21 @@
 		 -->
 		 <section>
 			 <div class="grid grid-cols-2 gap-4">
-				<div class="bg-purple-100 rounded p-8" id="error">
+				<div class="bg-purple-100 rounded p-8" id="error shadow-md">
 					<h1 class="text-2xl mb-2">Please Deposit</h1>
 					<div class="">
 						<input class="p-3 border mb-2 w-1/2 rounded border-gray-400 " type="text" placeholder="$ammount deposit" id="deposit-ammount">
-					<button id="plus" class=" bg-green-400 rounded-full p-4 mx-2 font-bold">+</button>
-					<button id="minus" class=" bg-red-400 rounded-full p-4 font-bold text-xl">-</button> 
+					<button id="plus" class=" bg-green-400 rounded-full px-3 py-4 mx-2 font-bold shadow-lg">+</button>
+					<button id="minus" class=" bg-red-400 rounded-full p-4 font-bold text-xl shadow-lg">-</button> 
 					</div> 
 					<button id="deposit-button" class="px-3 rounded border border-gray-400 bg-indigo-500 font-semibold py-2 text-white">Deposit</button>
 				</div>
-				<div class="bg-purple-100 rounded p-8">
+				<div class="bg-purple-100 rounded p-8 shadow-md">
 					<h1 class="text-2xl mb-2">Please Withdraw</h1>
 					<div>
 						<input class="p-3 border mb-2 w-1/2 rounded border-gray-400" type="text" placeholder="$ammount Withdraw" id="withdraw-ammount">
-					<button id="plusW" class=" bg-green-400 rounded-full p-4 mx-2 font-bold">+</button>
-					<button id="minusW" class=" bg-red-400 rounded-full p-4 font-bold text-xl">-</button> 
+					<button id="plusW" class=" bg-green-400 rounded-full px-3 py-4 mx-2 mx-2 font-bold shadow-lg">+</button>
+					<button id="minusW" class=" bg-red-400 rounded-full p-4 font-bold text-xl shadow-lg">-</button> 
 					</div>
 
 					<button id="withdraw-button" class="px-3 rounded border border-gray-400 bg-indigo-500 font-semibold py-2 text-white">Withdraw</button>
